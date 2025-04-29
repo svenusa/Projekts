@@ -7,16 +7,41 @@ from PIL import Image, ImageTk
 #galvenais logs
 logs = Tk()
 logs.geometry("400x500") #loga izmērs
-logs.title("Auto noma")
-logs.configure(background="lightblue")
+logs.title("Sporta zāle")
+logs.configure(background="lime")
 
 def aprekinat():
-    auto_veids = auto_veids_var.get()
-    auto_markas = auto_markas_var.get()
-    dzinejs = dzinejs_var.get()
-    nomas_dienas = int(nomas_dienas_var.get())
+    gym_veids = gym_veids_var.get()
+    water = water_var.get()
+    sauna = sauna_var.get()
+    laiks = laiks_var.get()
 
-    if auto_markas == "Volvo":
+    if gym_veids == "Volvo":
+        if water == "Vieglais":
+            if dzinejs == "Dīzelis":
+                cena_dienā = 40
+            elif dzinejs == "Elektriskais":
+                cena_dienā = 35
+            elif dzinejs == "Koka":
+                cena_dienā = 50
+
+        elif water == "Smagais":
+            if dzinejs == "Dīzelis":
+                cena_dienā = 50
+            elif dzinejs == "Elektriskais":
+                cena_dienā = 45
+            elif dzinejs == "Koka":
+                cena_dienā = 60
+
+        elif water == "Traktors":
+            if dzinejs == "Dīzelis":
+                cena_dienā = 60
+            elif dzinejs == "Elektriskais":
+                cena_dienā = 55
+            elif dzinejs == "Koka":
+                cena_dienā = 70
+
+    if gym_veids == "Nissan":
         if auto_veids == "Vieglais":
             if dzinejs == "Dīzelis":
                 cena_dienā = 40
@@ -41,32 +66,7 @@ def aprekinat():
             elif dzinejs == "Koka":
                 cena_dienā = 70
 
-    if auto_markas == "Nissan":
-        if auto_veids == "Vieglais":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 40
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 35
-            elif dzinejs == "Koka":
-                cena_dienā = 50
-
-        elif auto_veids == "Smagais":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 50
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 45
-            elif dzinejs == "Koka":
-                cena_dienā = 60
-
-        elif auto_veids == "Traktors":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 60
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 55
-            elif dzinejs == "Koka":
-                cena_dienā = 70
-
-    if auto_markas == "Mercedes":
+    if gym_veids == "Mercedes":
         if auto_veids == "Vieglais":
             if dzinejs == "Dīzelis":
                 cena_dienā = 40
