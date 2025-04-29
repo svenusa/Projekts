@@ -11,85 +11,106 @@ logs.title("Sporta zāle")
 logs.configure(background="lime")
 
 def aprekinat():
-    gym_veids = gym_veids_var.get()
-    water = water_var.get()
-    sauna = sauna_var.get()
-    laiks = laiks_var.get()
+    abonements = abonements_var.get()
+    trenins = trenins_.get()
+    pakalpojums = pakalpojums_var.get()
 
-    if gym_veids == "Volvo":
-        if water == "Vieglais":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 40
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 35
-            elif dzinejs == "Koka":
-                cena_dienā = 50
+    if abonements == "Gada":
+        abonements = 365
 
-        elif water == "Smagais":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 50
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 45
-            elif dzinejs == "Koka":
-                cena_dienā = 60
+        if trenins == "Svaru zāle":
+            trenins = 5
 
-        elif water == "Traktors":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 60
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 55
-            elif dzinejs == "Koka":
-                cena_dienā = 70
+            if pakalpojums == "Baseins":
+                    pakalpojums = 3
+            elif pakalpojums == "Sauna":
+                    pakalpojums = 2
+            elif pakalpojums == "Masāžas krēsls":
+                    pakalpojums = 1
+            elif pakalpojums == "-":
+                    pakalpojums = 0
 
-    if gym_veids == "Nissan":
-        if auto_veids == "Vieglais":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 40
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 35
-            elif dzinejs == "Koka":
-                cena_dienā = 50
 
-        elif auto_veids == "Smagais":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 50
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 45
-            elif dzinejs == "Koka":
-                cena_dienā = 60
+    if abonements == "Mēneša":
+        abonements = 31
 
-        elif auto_veids == "Traktors":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 60
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 55
-            elif dzinejs == "Koka":
-                cena_dienā = 70
+        if trenins == "Svaru zāle":
+            trenins = 0.2
 
-    if gym_veids == "Mercedes":
-        if auto_veids == "Vieglais":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 40
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 35
-            elif dzinejs == "Koka":
-                cena_dienā = 50
+            if pakalpojums == "Baseins":
+                    pakalpojums = 3
+            elif pakalpojums == "Sauna":
+                    pakalpojums = 2
+            elif pakalpojums == "Masāžas krēsls":
+                    pakalpojums = 1
+            elif pakalpojums == "-":
+                    pakalpojums = 0
 
-        elif auto_veids == "Smagais":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 50
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 45
-            elif dzinejs == "Koka":
-                cena_dienā = 60
 
-        elif auto_veids == "Traktors":
-            if dzinejs == "Dīzelis":
-                cena_dienā = 60
-            elif dzinejs == "Elektriskais":
-                cena_dienā = 55
-            elif dzinejs == "Koka":
-                cena_dienā = 70  
+
+            if rajons == "Jūrmala":
+                rajons = 5
+                
+                if pakalpojums == "Baseins":
+                    pakalpojums = 3
+                elif pakalpojums == "Sauna":
+                    pakalpojums = 2
+                elif pakalpojums == "Masāžas krēsls":
+                    pakalpojums = 1
+                elif pakalpojums == "-":
+                    pakalpojums = 0
+
+    if abonements == "Izmēģinājuma":
+        abonements = 1
+
+        if trenins == "Grupas treniņš":
+            trenins = 5
+
+            if rajons == "Ķengarags":
+                rajons = 1
+
+                if pakalpojums == "Baseins":
+                    pakalpojums = 3
+                elif pakalpojums == "Sauna":
+                    pakalpojums = 2
+                elif pakalpojums == "Masāžas krēsls":
+                    pakalpojums = 1
+                elif pakalpojums == "-":
+                    pakalpojums = 0
+
+            if rajons == "Jēkabpils":
+                rajons = 3
+                
+                if pakalpojums == "Baseins":
+                    pakalpojums = 3
+                elif pakalpojums == "Sauna":
+                    pakalpojums = 2
+                elif pakalpojums == "Masāžas krēsls":
+                    pakalpojums = 1
+                elif pakalpojums == "-":
+                    pakalpojums = 0
+
+            if rajons == "Jūrmala":
+                rajons = 5
+                
+                if pakalpojums == "Baseins":
+                    pakalpojums = 3
+                elif pakalpojums == "Sauna":
+                    pakalpojums = 2
+                elif pakalpojums == "Masāžas krēsls":
+                    pakalpojums = 1
+                elif pakalpojums == "-":
+                    pakalpojums = 0
+
+
+
+
+
+
+
+
+
+
 
 
     kopējā_cena = cena_dienā * nomas_dienas
